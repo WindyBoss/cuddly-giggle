@@ -1,0 +1,118 @@
+.premise-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5%;
+  padding-left: 5%;
+  min-height: 100vh;
+  text-align: center;
+
+  &.bg-color-grey {
+    background-color: #c9c9c9;
+  }
+
+  &.flex-column {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &_image {
+    background-image: url("/images/premise_page/premise.jpeg");
+    min-width: 45%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+  }
+
+  &_title {
+    min-width: 100%;
+  }
+
+  &_info-text {
+    line-height: 1.75em;
+    text-align: start;
+  }
+
+  &_info-title {
+    line-height: 2em;
+    font-family: "Reenie Beanie";
+  }
+
+  &_info-item {
+    margin: 10px;
+    text-align: start;
+  }
+
+  &_info-container.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    & > .premise-container_info-section.text-center {
+      text-align: center;
+    }
+  }
+
+  &_info-container.margin {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  &_info-container.margin-right {
+    margin-right: 5%;
+  }
+
+  &_info-container.margin-left {
+    margin-left: 5%;
+  }
+
+  &_info-section {
+    max-width: 70%;
+    display: inline-block;
+
+    &.icon {
+      filter: invert(75%) sepia(14%) saturate(853%) hue-rotate(6deg) brightness(90%) contrast(83%);
+    }
+  }
+
+  &_table {
+    max-width: 90%;
+
+    &-cell {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      max-width: 50%;
+      min-width: 50%;
+      padding: 30px;
+      font-weight: 500;
+
+      &.cell-1 {
+        border: 1px solid #000000;
+      }
+
+      &.cell-2 {
+        border: 1px solid #000000;
+        border-left: none;
+      }
+
+      &.cell-3 {
+        border: 1px solid #000000;
+        border-top: none;
+      }
+
+      &.cell-4 {
+        border: 1px solid #000000;
+        border-top: none;
+        border-left: none;
+      }
+    }
+
+    &-row {
+      display: flex;
+    }
+  }
+}

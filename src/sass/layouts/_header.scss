@@ -1,0 +1,154 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+
+  &_image {
+    max-width: 100%;
+
+    &-container {
+      width: 10%;
+      margin-left: 5%;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_navigation-container {
+    min-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  &_navigation-item {
+    position: relative;
+    display: flex;
+    align-items: start;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #aaadab;
+      color: #000000;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    background-color: #1f1f1e;
+    color: #ffffff;
+  }
+
+  &_navigation-text {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+  }
+
+  &_contact {
+    min-width: 12%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 5%;
+
+    &-item {
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &.instagram {
+        background-image: url("/images/social_media/instagram.svg");
+      }
+
+      &.facebook {
+        background-image: url("/images/social_media/facebook11.svg");
+      }
+    }
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid #000000;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+        &:has(.instagram) {
+          border: 1px solid #ffffff;
+          cursor: pointer;
+          background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        &:has(.facebook) {
+          border: 1px solid #ffffff;
+          cursor: pointer;
+          background: #1c3977;
+        }
+        .page-header_contact-item {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  &_modal-container {
+    position: absolute;
+    opacity: 0;
+    width: max-content;
+    left: 0px;
+    top: 2.5em;
+    pointer-events: none;
+
+    &.active {
+      pointer-events: all;
+      opacity: 1;
+      background-color: #d1d1cf;
+      border-radius: 5px;
+      z-index: 1;
+    }
+  }
+
+  &_modal-list {
+    list-style: none;
+    padding: 0px;
+    color: #000000;
+
+    &-item {
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 10px;
+      & a {
+        text-decoration: none;
+        color: inherit;
+        margin: -10px;
+        padding: 10px;
+      }
+
+      &:hover {
+        background-color: #aaadab;
+      }
+    }
+  }
+}
+
+.mobile-text {
+  @media screen and (min-width: $tablet-min) {
+    display: none;
+  }
+
+    @media screen and (max-width: $mobile-max) {
+    display: block;
+  }
+}
